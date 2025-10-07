@@ -1,4 +1,5 @@
 #include <stdint.h> 
+
 int main(void) {
  *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x02; //Включение тактирования порта GPIOB
  *(uint32_t*)(0x40020400UL + 0x00UL) |= 0x4000; //Настройка работы 7-го пина GPIOB в режиме вывода сигнала (Output mode)

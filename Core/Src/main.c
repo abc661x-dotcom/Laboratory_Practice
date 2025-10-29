@@ -9,4 +9,4 @@ int main(void) {
  while(1){
  *(uint32_t*)(0x40020400UL + 0x18UL) |= 0x80; //Установка единицы в 7-ой бит регистра ODR
  }
-}//ddddddddddddddddddddd
+}//dddddddddddddddddddddaaaaaaa

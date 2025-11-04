@@ -1,3 +1,4 @@
+/*
 #include <init.h>
 
 void GPIO_Ini(void){
@@ -7,4 +8,17 @@ void GPIO_Ini(void){
     *(uint32_t*)(0x40020400UL + 0x04UL) |= 0x00;   // Настройка на Push-Pull работу 7-го пина GPIOB (Output Push-Pull)
     *(uint32_t*)(0x40020400UL + 0x08UL) |= 0x4000; // Настройка скорости работы 7-го пина GPIOB на среднюю
     *(uint32_t*)(0x40020400UL + 0x0CUL) |= 0x00;   // Отключение PU/PD резисторов для 7-го пина GPIOB
+}
+*/
+#include "../Inc/init.h"
+void GPIO_Init_memory(void)
+{
+    *(uint32_t*)(0x40023800UL + 0x30UL) |= 0x02UL + 0x04UL; 
+    *(uint32_t*)(0x40020400UL + 0x00UL) |= 0x4000UL; 
+    *(uint32_t*)(0x40020400UL + 0x04UL) &= ~0X80UL;   
+    *(uint32_t*)(0x40020400UL + 0x08UL) |= 0x4000UL; 
+    *(uint32_t*)(0x40020400UL + 0x0CUL) |= 0x800000UL;   
+}
+Void GPIO_Init_CMSIS(void)
+{
 }

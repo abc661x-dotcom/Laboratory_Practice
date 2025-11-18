@@ -52,7 +52,7 @@ extern volatile uint8_t g_led_step;               // LED点亮步骤: 0=全灭, 
 extern volatile uint8_t g_pg3_button_state;       // PG3按键状态
 extern volatile uint8_t g_pg3_pressed_flag;       // PG3按下标志
 extern volatile uint8_t g_system_mode;            // 系统模式: 0=正常模式, 1=PD4输出模式
-extern volatile uint8_t g_pd4_mode_state;         // PD4引脚模式状态: 0=输入上拉, 1=输出高电平
+extern volatile uint8_t g_pd4_mode_state;         // PD4引脚模式状态: 0=输入上拉, 1=输出高电平, 2=无上下拉
 
 // 函数声明
 void GPIO_Init_Memory(void);  // GPIO初始化函数 - 使用直接内存访问方式配置GPIO

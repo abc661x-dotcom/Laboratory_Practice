@@ -222,7 +222,7 @@ int main(void) {
 
         // 检测PD4按钮：LED顺序点亮控制（仅在正常模式下工作）
         if (check_pd4_button()) {
-            // 步进值循环：0→1→2→3→0...
+            // 步进值循环：0→1→2→3→0
             g_led_step = (uint8_t)((g_led_step + 1U) % 4U);
             
             // 点亮对应的单个LED

@@ -48,15 +48,15 @@ extern volatile uint8_t g_pd4_button_state;       // PD4按键状态
 extern volatile uint32_t g_pd4_raw_value;         // PD4原始引脚值
 extern volatile uint8_t g_pd4_pressed_flag;       // PD4按下标志
 extern volatile uint32_t g_button_debug_counter;  // 按键调试计数器
-extern volatile uint8_t g_led_step;               // LED点亮步骤: 0=全灭, 1=PB14, 2=PB7, 3=PB0
+extern volatile uint8_t g_led_step;               // LED点亮步骤: 0=全灭, 1=PB14, 2=PB7
 extern volatile uint8_t g_pg3_button_state;       // PG3按键状态
 extern volatile uint8_t g_pg3_pressed_flag;       // PG3按下标志
 extern volatile uint8_t g_system_mode;            // 系统模式: 0=正常模式, 1=PD4输出模式
-extern volatile uint8_t g_pd4_mode_state;         // PD4引脚模式状态: 0=输入上拉, 1=输出高电平, 2=无上下拉
+extern volatile uint8_t g_pd4_mode_state;         // PD4引脚模式状态: 0=输入上拉, 1=输出高电平
 
 // 函数声明
 void GPIO_Init_Memory(void);  // GPIO初始化函数 - 使用直接内存访问方式配置GPIO
-void PD4_Set_Input_PullUp(void);     // 设置PD4为输入模式+上拉（正常模式）
+void PD4_Set_Input_PullUp(void);     // 设置PD4为输入模式+上拉
 void PD4_Set_Output_High(void);      // 设置PD4为输出模式+高电平
 
 #endif

@@ -100,5 +100,5 @@ void PD4_Set_Output_High(void) {
     *pd4_bsrr = (1U << 4);                                             // 设置PD4输出高电平
     
     // 更新PD4模式状态
-    g_pd4_mode_state = 1;  // 输出高电平模式
+    g_pd4_mode_state = 1;  // 输出高电平模式//////
 }

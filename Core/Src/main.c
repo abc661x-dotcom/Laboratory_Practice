@@ -229,7 +229,7 @@ int main(void) {
             turn_on_single_led(g_led_step);
         }
 
-        // 短延时，降低CPU占用率
+        // 短延时，降低CPU占用率///
         delay_ms(10);
     }
 }
